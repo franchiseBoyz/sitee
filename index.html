@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taritai - Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a00f4, #ff6ec4, #00f0ff);
+            background-size: 300% 300%;
+            animation: gradientBG 10s ease infinite;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .coming-soon {
+            font-size: 2rem;
+            color: #ffeb3b;
+        }
+
+        .loading-bar {
+            width: 80%;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .loading-bar span {
+            display: block;
+            height: 15px;
+            background-color: #fff;
+            width: 0%;
+            animation: load 4s infinite;
+        }
+
+        @keyframes load {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 0%; }
+        }
+
+        .message {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+
+        /* Gradient background animation */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Animated background particles */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: move 10s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100vw);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Taritai</h1>
+        <p class="coming-soon">Creative & Innovative Platform</p>
+        <div class="loading-bar">
+            <span></span>
+        </div>
+        <p class="message">We're crafting something amazing. Stay tuned!</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Taritai. All Rights Reserved | Site is Under Construction</p>
+    </footer>
+
+    <!-- Animated background -->
+    <div class="background">
+        <!-- Particle elements -->
+        <div class="particle" style="width: 20px; height: 20px; top: 10%; left: 5%;"></div>
+        <div class="particle" style="width: 10px; height: 10px; top: 30%; left: 20%;"></div>
+        <div class="particle" style="width: 15px; height: 15px; top: 50%; left: 70%;"></div>
+        <div class="particle" style="width: 30px; height: 30px; top: 70%; left: 30%;"></div>
+        <div class="particle" style="width: 25px; height: 25px; top: 40%; left: 80%;"></div>
+        <div class="particle" style="width: 5px; height: 5px; top: 60%; left: 10%;"></div>
+    </div>
+
+</body>
+</html>
